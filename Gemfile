@@ -7,7 +7,26 @@ gem 'rubocop', '~>0.81.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
+# The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
+gem 'bootstrap', '~> 4.0'
+# This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
+gem 'jquery-rails', '~> 4.4'
+# Forms made easy!
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
+# Works with Rails out of the box
+gem 'popper_js', '~> 1.16'
+# tether-rails wraps the Tether JavaScript library so that it can easily be included in Rails.
+gem 'tether-rails', '~> 1.4'
+# Hirb provides a mini view framework for console applications
+gem 'hirb', '~> 0.7.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
