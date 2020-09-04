@@ -14,6 +14,7 @@ end
 group :production do
   gem 'pg'
 end
+
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.2'
 # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
@@ -60,6 +61,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 group :development do

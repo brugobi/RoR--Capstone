@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Article.destroy_all
+
+5.times do |index|
+  Article.create!(
+    title: Faker::Lorem.sentence(3, false, 0).chop,
+    content: Faker::Lorem.paragraphs,
+    image: "textetextetext",
+  )
+end
+
+p "Created #{Article.count} articles"
