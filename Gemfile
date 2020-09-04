@@ -14,7 +14,8 @@ end
 group :production do
   gem 'pg'
 end
-
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.2'
 # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
 gem 'bootstrap', '~> 4.0'
 # This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
