@@ -7,12 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Article.destroy_all
+#Article.reset_sequence_name
 
 5.times do |index|
   Article.create!(
     title: Faker::Lorem.sentence(3, false, 0).chop,
     content: Faker::Lorem.paragraphs,
     image: "textetextetext",
+    #category: "Canada"
   )
 end
 

@@ -1,6 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+<h1>Articles | <%= link_to 'New Category', new_category_path %></h1>
+
+<br>
+<br>
+<br>
+All Category<br>
+<% Category.all.each do |cat| %>
+  <%= link_to cat.name, articles_path(category: cat.name) %>
+<br>  
+<% end %>
+<br>
+<br>
+<br>
+In NavBar<br>
+<% Category.where(priority: true).each do |cat| %>
+  <%= link_to cat.name, articles_path(category: cat.name) %>
+<br>  
+<% end %>
+<br>
+<br>
+<br>
 
 <table>
   <thead>
@@ -17,7 +37,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.content %></td>
+        <td><%= article.category.name %></td>
         <td><%= article.image %></td>
         <td><%= article.author_id %></td>
         <td><%= link_to 'Show', article %></td>
