@@ -15,7 +15,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag(@article.photo) %>
+  <%= image_tag(@article.photo) if @article.photo.attached? %>
 </p>
 
 <p>

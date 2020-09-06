@@ -9,52 +9,47 @@
 Article.destroy_all
 Category.destroy_all
 
-# 5.times do |index|
-#   Article.create!(
-#     title: Faker::Lorem.sentence(3, false, 0).chop,
-#     content: Faker::Lorem.paragraphs,
-#     image: 'https://avatars3.githubusercontent.com/u/60522356?s=400&u=c26966471d76a25d871027b43c0282504e04caca&v=4'
-#   )
-# end
-
 # create a category first
 # my_category = Category.create(name: 'Rails')
 # create the article using that category
 # article = Article.create(title: 'A rails blog', category: my_category)
-
+# Imagem de Free-Photos por Pixabay
 # create a category first
-# p "Created #{Category.count} categories"
+
 my_category = Category.create([{name: 'Outside', priority: true}, {name: 'Food', priority: true}, {name: 'City', priority: true}])
+
+p "Created #{Category.count} categories"
+
 # create the article using that category
 article = Article.create([
   {
     title: Faker::Lorem.sentence(3, false, 0).chop,  
     content: Faker::Lorem.paragraphs, 
-    image: 'https://avatars3.githubusercontent.com/u/60522356?s=400&u=c26966471d76a25d871027b43c0282504e04caca&v=4', 
-    category: my_category[0]
+    category: my_category[0],
+    photo: File.open('app/assets/images/toronto.jpg')
   },
   {
     title: Faker::Lorem.sentence(3, false, 0).chop,  
     content: Faker::Lorem.paragraphs, 
-    image: 'https://avatars3.githubusercontent.com/u/60522356?s=400&u=c26966471d76a25d871027b43c0282504e04caca&v=4', 
-    category: my_category[1]
+    category: my_category[1],
+    photo: File.open('app/assets/images/braids.jpg')
   },
   {
     title: Faker::Lorem.sentence(3, false, 0).chop,  
     content: Faker::Lorem.paragraphs, 
-    image: 'https://avatars3.githubusercontent.com/u/60522356?s=400&u=c26966471d76a25d871027b43c0282504e04caca&v=4', 
-    category: my_category[2]
+    category: my_category[2],
+    photo: File.open('app/assets/images/espresso.jpg')
   },
   {
     title: Faker::Lorem.sentence(3, false, 0).chop,  
     content: Faker::Lorem.paragraphs, 
-    image: 'https://avatars3.githubusercontent.com/u/60522356?s=400&u=c26966471d76a25d871027b43c0282504e04caca&v=4', 
-    category: my_category[1]
+    category: my_category[1],
+    photo: File.open('app/assets/images/buildings.jpg')
   }]
 )
 
 
-
+# image.attach(io: File.open('app/assets/images/buildings.jpg'), filename: 'buildings.jpg')
 p "Created #{Article.count} articles"
 
 

@@ -30,7 +30,9 @@ gem 'tether-rails', '~> 1.4'
 # Hirb provides a mini view framework for console applications
 gem 'hirb', '~> 0.7.3'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+# gem 'puma', '~> 3.11'
+# A modern CSS framework based on Flexbox
+gem "bulma-rails", "~> 0.9.0"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
