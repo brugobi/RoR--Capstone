@@ -2,7 +2,29 @@
 @import "bootstrap";
 @import "tether";
 
+.logo {
+  width: 80px;
+  height: 70px;
+  padding-right: 5px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+}
+
 .nav-color {
   background-color: rgb(255, 255, 255);
-  border-bottom-style: solid 10px rgb(108, 103, 99);
+}
+
+.nav-color a {
+    color: rgb(108, 103, 99);
+}
+
+a:hover {
+  color: rgb(232,75,42);
+}
+
+body {
+  background-color: rgb(61, 52, 47);
 }
