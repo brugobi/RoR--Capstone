@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #get 'votes/upvote'
+  #get 'votes/downvote'
+  # resources :votes, only: [:create, :destroy]
   resources :categories
   resources :articles
   #root 'pages#home'
