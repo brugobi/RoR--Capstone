@@ -29,20 +29,14 @@
             <%= form.file_field :photo %>
           </div>
 
-          <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CATEGORY
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <div class="dropdown-item" href="#">
-              <% Category.where(priority: true).each do |cat| %>
-                <%= link_to cat.name, articles_path(category: cat.name) %><br>  
-              <% end %>
-            </div>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">All Categories</a>   
+          <div class="dropdown-divider"></div>
+            <span class="color" href="#">Select a category</span>
+            <span><%= select_tag(:category_id, options_for_select(@categories)) %></span>
+            <span><%= link_to 'New Category', new_category_path %></h1></span> 
           </div>
         </div>
+        
+        
 
           <%# <div class="field">
             <%= form.label :author_id %>

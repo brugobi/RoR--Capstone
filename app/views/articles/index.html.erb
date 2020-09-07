@@ -2,26 +2,6 @@
 
 <h1>Articles | <%= link_to 'New Category', new_category_path %></h1>
 
-<br>
-<br>
-<br>
-All Category<br>
-<% Category.all.each do |cat| %>
-  <%= link_to cat.name, articles_path(category: cat.name) %>
-<br>  
-<% end %>
-<br>
-<br>
-<br>
-In NavBar<br>
-<% Category.where(priority: true).each do |cat| %>
-  <%= link_to cat.name, articles_path(category: cat.name) %>
-<br>  
-<% end %>
-<br>
-<br>
-<br>
-
 <table>
   <thead>
     <tr>
@@ -49,6 +29,8 @@ In NavBar<br>
     <% end %>
   </tbody>
 </table>
+
+
 
 <br>
 
