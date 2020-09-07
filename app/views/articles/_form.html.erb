@@ -1,47 +1,62 @@
-<%= form_with(model: article, local: true) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+<div class="container-fluid form">
+  <div class="row border rounded d-flex align-items-center border-info justify-content-center boder-color">
+    <div class="col-4 text-center">
+      <%= form_with(model: article, local: true) do |form| %>
+        <% if article.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
-      <ul>
-      <% article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+            <ul>
+              <% article.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="article-field">
+          <div class="field">
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+          </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+          <div class="field">
+            <%= form.label :content %>
+            <%= form.text_area :content %>
+          </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
+          <div class="field">
+            <%= form.label :photo %>
+            <%= form.file_field :photo %>
+          </div>
 
-  <div class="field">
-    <%= form.label :image %><br />
-    <%= form.file_field :image %>
-  </div>
+          <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            CATEGORY
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-item" href="#">
+              <% Category.where(priority: true).each do |cat| %>
+                <%= link_to cat.name, articles_path(category: cat.name) %><br>  
+              <% end %>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">All Categories</a>   
+          </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :photo %>
-    <%= form.file_field :photo %>
-  </div>
+          <%# <div class="field">
+            <%= form.label :author_id %>
+            <%# <%= form.number_field :author_id %>
+          <%# </div> %>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
-
-  <div class="field">
-    <%= form.label :author_id %>
-    <%= form.number_field :author_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+          <div class="actions">
+            <%= form.submit %>
+          </div>
+        </div>
+      </div>
+        
+    <% end %>
+      </div>  
+    </div> 
+  </div>   
+</div>  

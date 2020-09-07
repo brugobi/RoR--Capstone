@@ -1,5 +1,12 @@
-<h1>New Article</h1>
+<div class="container-fluid new-article">
+  <div class="row d-flex align-items-center border-info justify-content-center">
+    <div class="col-4 text-center">
+      <h2 class = "color">New Article</h2>
+      <%= link_to 'Back', articles_path %>
+    </div>
+  </div>
+</div>      
+
 
 <%= render 'form', article: @article %>
 
-<%= link_to 'Back', articles_path %>
