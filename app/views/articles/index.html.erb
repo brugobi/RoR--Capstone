@@ -16,7 +16,7 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.category.name %></td>
-        <td><img src=<%=article.image%>></td>
+        <td><img src=<%= article.image %>></td>
         <td><%= article.author_id %></td>
         <td><%= link_to 'Show', article %></td>
         <% if current_user %>
