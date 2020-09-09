@@ -12,6 +12,10 @@
   </thead>
 
   <tbody>
+  <div class='row'>
+    <%= full_article_container(@categorized_articles)%>
+  </div>
+    <%= link_to 'New Category', new_category_path %>
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>

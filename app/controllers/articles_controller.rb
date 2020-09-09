@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    @feature_article = Article.first
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
       @articles = Article.where(category: @category)
