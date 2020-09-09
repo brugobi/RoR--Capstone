@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :articles, class_name: 'Article', foreign_key: 'author_id'
   #validates :name, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 50 }
+  has_many :votes, dependent: :destroy
 end

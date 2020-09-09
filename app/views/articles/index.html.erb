@@ -20,8 +20,9 @@
         <td><%= article.author_id %></td>
         <td><%= link_to 'Show', article %></td>
         <% if current_user %>
-          <td><%= link_to 'Upvote', votes_upvote_path %></td>
-          <td><%= link_to 'Downvote', votes_downvote_path %></td>
+          <div>
+            <td><%= upvote_or_downvote_btn(article) %></td>
+          </div>
           <td><%= link_to 'Edit', edit_article_path(article) %></td>
           <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>  
