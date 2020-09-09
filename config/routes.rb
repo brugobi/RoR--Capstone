@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'votes/create'
+  get 'votes/destroy'
   get 'votes/upvote'
   get 'votes/downvote'
   # resources :votes, only: [:create, :destroy]
