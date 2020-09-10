@@ -2,6 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.feature-article {
+  min-height: 55vh;
+  background: no-repeat center center;
+  background-size: cover;
+}
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.specific-article {
+  min-height: 35vh;
+}
 .new-article {
   padding-top: 10px;
 }

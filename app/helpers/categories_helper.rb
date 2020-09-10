@@ -1,4 +1,5 @@
 module CategoriesHelper
+  
   def full_article_container(articles)
     flag = true
     generated = ''
@@ -16,17 +17,17 @@ module CategoriesHelper
   end
   def create_article(article)
     content_tag :div, class: ["col-md-6", 'd-flex', 'img-height'] do
-    feature_article(article).concat(specific_category_article(article))
+      featured_article(article).concat(specific_category_article(article))
     end
   end
   def create_reverse_article(article)
     content_tag :div, class: ["col-md-6", 'd-flex', 'img-height'] do
-    specific_category_article(article).concat(feature_article(article))
+      specific_category_article(article).concat(feature_article(article))
     end
   end
-  def feature_article(article)
+  def featured_article(article)
     content_tag :div, class: ['col-md-6', 'img-height'] do
-    image_tag("#{article.image}", class: 'full-width',alt: "Continue")
+      image_tag("#{article.image}", class: 'full-width',alt: "Continue")
     end
   end
   def specific_category_article(article)
