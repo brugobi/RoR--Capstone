@@ -1,5 +1,12 @@
 module ApplicationHelper
-
+  def alert_type(type)
+    if type == 'notice'
+      type = 'info'
+    elsif type == 'alert'
+      type = 'danger'
+    end
+    type
+  end
   def upvote_or_downvote_btn(article)
     vote = Vote.find_by(article: @articles, user: current_user)
     if vote
