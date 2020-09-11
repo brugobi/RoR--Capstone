@@ -1,41 +1,39 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :set_article, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[show index]
   # GET /articles
   # GET /articles.json
   def index
     @feature_article = Article.first
-    if params.has_key?(:category)
+    if params.key?(:category)
       @category = Category.find_by_name(params[:category])
       @articles = Article.where(category: @category)
     else
       @articles = Article.all
-    end 
+    end
   end
 
   # GET /articles/1
   # GET /articles/1.json
-  def show
-    
-  end
+  def show; end
 
   # GET /articles/new
   def new
-    #@article = current_user.articles.build
-    @article = Article.new 
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    # @article = current_user.articles.build
+    @article = Article.new
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   # GET /articles/1/edit
   def edit
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-    #@article = current_user.articles.build(article_params)
+    # @article = current_user.articles.build(article_params)
     @article.author_id = current_user
     @article.category_id = params[:category_id]
     respond_to do |format|
@@ -75,13 +73,14 @@ class ArticlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:title, :content, :image, :author_id, :photo)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.require(:article).permit(:title, :content, :image, :author_id, :photo)
+  end
 end
