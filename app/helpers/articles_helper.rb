@@ -6,7 +6,7 @@ module ArticlesHelper
   end
   def specific_category_articles(article)
     content_tag :div, class: ["col-md-3", 'specific-article'], style: "background-image: url(#{image_path "#{article.image}"})" do
-      link_to(article.category.name, categories_path(article.category)).
+      link_to(article.category.name, category_path(article.category)).
       concat(content_tag(:p, article.title))
     end
   end
