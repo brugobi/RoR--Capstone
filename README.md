@@ -2,10 +2,6 @@
 
 > This is blog where the user can create an article to share informations about Canada.
 
-## Live Version
-
-[Live Version](https://motorista-web-magazine.herokuapp.com/)
-
 ## Built With
 
 - Ruby v2.6.5
