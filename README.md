@@ -60,5 +60,5 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Project requested by [Microverse Program](https://www.microverse.org/).
-- The project design and original idea are from [Nelson Sakwa](https://www.behance.net/sakwadesignstudio). Big cheers to him! You can find the complete project on [this Behance link](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version).
-- All the articles were taken from [MotorTrend](https://www.motortrend.com/) and from [MotorCycleNews](https://www.motorcyclenews.com/). Big cheers to the amazing authors and photographers.
+- The project design and original idea are from [Nelson Sakwa](https://www.behance.net/sakwadesignstudio). You can find the complete project on [this Behance link](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version).
+- All the images were taken from [Pixabay](https://pixabay.com/pt/).
