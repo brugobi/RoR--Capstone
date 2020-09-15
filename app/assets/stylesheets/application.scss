@@ -1,6 +1,7 @@
 @import "/*";
 @import "bootstrap";
 @import "tether";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 .logo {
   width: 80px;
@@ -8,31 +9,8 @@
   padding-right: 5px;
 }
 
-header {
-  position: absolute;
-  top: 0;
-}
-
-.nav-color {
-  background-color: rgb(255, 255, 255);
-}
-
-.nav-color a {
-  color: rgb(108, 103, 99);
-}
-
-a:hover {
-  color: rgb(232, 75, 42);
-}
-
 body {
   background-color: rgb(61, 52, 47);
 }
 
-.color {
-  color: rgb(232, 75, 42);
-}
 
-.devise_links a {
-  color: rgb(232, 75, 42);
-}

@@ -1,0 +1,19 @@
+header {
+  position: absolute;
+  top: 0;
+}
+
+.nav-color {
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 5px rgb(108, 102, 100);
+  font-family: 'Rubik', sans-serif;
+  font-size: large;
+}
+
+.nav-color a {
+  color: rgb(108, 103, 99) !important;
+}
+
+a:hover {
+  color:rgb(232, 75, 42) !important;
+}
