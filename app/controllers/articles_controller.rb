@@ -10,7 +10,6 @@ class ArticlesController < ApplicationController
       @articles = Article.where(category: @category).includes(:category)
     else
       @articles = Article.belong_to_category.includes(:category)
-      #@articles = Article.all.includes(:category)
     end
   end
 

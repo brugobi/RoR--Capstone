@@ -21,5 +21,7 @@
   <%= @article.author_id %>
 </p>
 
+<%= @article.votes.count %>
+<%= link_to 'Vote', article_votes_path(@article), method: :post %>
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

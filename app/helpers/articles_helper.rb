@@ -10,6 +10,7 @@ module ArticlesHelper
                       style: "background-image: url(#{image_path article.image.to_s})" do
       link_to(article.category.name, category_path(article.category))
         .concat(content_tag(:p, article.title))
+        link_to 'Show', article_path(article)
     end
   end
 end
