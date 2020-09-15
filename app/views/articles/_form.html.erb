@@ -1,6 +1,7 @@
-<div class="container-fluid form">
-  <div class="row border rounded d-flex align-items-center border-info justify-content-center boder-color">
-    <div class="col-4 text-center">
+<div class="container login-container">
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-4 text-center login-form-2">
+      <h2 class = "color">New Article</h2>
       <%= form_with(model: article, local: true) do |form| %>
         <% if article.errors.any? %>
           <div id="error_explanation">
@@ -13,7 +14,7 @@
             </ul>
           </div>
         <% end %>
-        <div class="article-field">
+        <div class="form-group">
           <div class="field">
             <%= form.label :title %>
             <%= form.text_field :title %>
@@ -32,19 +33,22 @@
           <div class="dropdown-divider"></div>
             <span class="color" href="#">Select a category</span>
             <span><%= select_tag(:category_id, options_for_select(@categories)) %></span>
-            <span><%= link_to 'New Category', new_category_path %></h1></span> 
           </div>
-        </div>
-        
-        
-
-          <%# <div class="field">
-            <%= form.label :author_id %>
-            <%# <%= form.number_field :author_id %>
-          <%# </div> %>
-
-          <div class="actions">
-            <%= form.submit %>
+          <div>
+            <p>OR</p>
+          </div>
+          <div>
+            <div class="form-group btnSubmit2 text-center">
+              <%= link_to 'Create new Category', new_category_path %></h1> 
+            </div>
+          </div>  
+          <div class="d-flex justify-content-around">
+            <div class="form-group btnSubmit text-center">
+              <%= form.button :submit %>
+            </div>
+            <div class="form-group btnSubmit text-center">
+              <%= link_to 'Back', root_path %>
+            </div>
           </div>
         </div>
       </div>
