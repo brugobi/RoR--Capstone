@@ -32,7 +32,7 @@ module CategoriesHelper
   end
 
   def specific_category_article(article)
-    content_tag :div, class: 'col-md-6' do
+    content_tag :div, class: 'col-md-6 category-link' do
       link_to(article.category.name, categories_path(id: article.category))
         .concat(content_tag(:p, article.title))
     end

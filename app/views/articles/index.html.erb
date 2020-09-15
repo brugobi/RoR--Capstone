@@ -1,7 +1,7 @@
 <div class='main-width'>
   <%= feature_article(@feature_article)%>
 </div>
-<div class='row'>
+<div class='row category-link'>
   <% @articles.each do |article| %>
     <%= specific_category_articles(article) %>
   <% end %>

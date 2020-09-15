@@ -6,7 +6,6 @@ header {
 .nav-color {
   background-color: rgb(255, 255, 255);
   border-bottom: solid 5px rgb(108, 102, 100);
-  font-family: 'Rubik', sans-serif;
   font-size: large;
 }
 
@@ -14,6 +13,6 @@ header {
   color: rgb(108, 103, 99) !important;
 }
 
-a:hover {
+.nav-color a:hover {
   color:rgb(232, 75, 42) !important;
 }
