@@ -3,4 +3,7 @@ class Article < ApplicationRecord
   has_one_attached :photo
   belongs_to :category # class_name: 'Article', foreign_key: 'category_id'
   has_many :votes, dependent: :destroy
+
+  scope :belong_to_category, -> {order(:title).limit(4)}
+  # scope :belong_to_category, -> {order(:title).group(:votes_count).limit(4)}
 end

@@ -9,7 +9,8 @@ class ArticlesController < ApplicationController
       @category = Category.find_by_name(params[:category])
       @articles = Article.where(category: @category).includes(:category)
     else
-      @articles = Article.all.includes(:category)
+      @articles = Article.belong_to_category.includes(:category)
+      #@articles = Article.all.includes(:category)
     end
   end
 
