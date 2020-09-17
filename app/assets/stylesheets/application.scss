@@ -3,15 +3,30 @@
 @import "tether";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
+html, body {
+  background-color: rgb(61, 52, 47);
+  font-family: 'Rubik', sans-serif;
+}
+
+header,
+footer {
+  height: 30px;
+}
+
+main {
+  flex: 1;
+}
+
 .logo {
   width: 80px;
   height: 70px;
   padding-right: 5px;
 }
 
-body {
-  background-color: rgb(61, 52, 47);
-  font-family: 'Rubik', sans-serif;
+.wrapper {
+    height: 100vh;
+    display: flex;
+
+    /* Direction of the items, can be row or column */
+    flex-direction: column;
 }
-
-

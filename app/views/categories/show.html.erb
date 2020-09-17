@@ -1,22 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @category.priority %>
-</p>
-
-<%# <h3> Products under this category </h3>
-  <% Article.where(category_id: @category.id).each do |article| %>
-    <%# <li> <%= article.name %> 
-  <%# <% end %> 
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
 <div class='row'>
   <%= full_article_container(@specific_categorized_articles)%>
 </div>

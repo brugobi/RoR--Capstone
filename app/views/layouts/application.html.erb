@@ -11,9 +11,17 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-    <%= render 'layouts/alerts' %>
-    <%= yield %>
+    <div class="wrapper">
+      <header>
+        <%= render 'layouts/navbar' %>
+      </header>
+      <div class="main">
+        <%= render 'layouts/alerts' %>
+        <%= yield %>
+      </div>
+      <footer class="footer">
+        <%= render 'layouts/footer' %> 
+      </footer>
+    </div>
   </body>
-  <%= render 'layouts/footer' %>
 </html>
