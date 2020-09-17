@@ -17,8 +17,6 @@ module CategoriesHelper
     content_tag :div, class: %w[col-md-6 d-flex img-height] do
       featured_article(article)
       .concat(specific_category_article(article))
-      #.concat(helper.link_to('Show', article_path))
-      #.truncate(article.content, :ommision => "... Read More", :length => 25)
     end
   end
 

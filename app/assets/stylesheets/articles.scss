@@ -4,7 +4,7 @@
 
 .feature-article {
   width: 100%;
-  min-height: 55vh;
+  height: 40vh;
   background: no-repeat center center;
   background-size: cover;
 }
@@ -12,10 +12,11 @@
 .row {
   margin-right: 0 !important;
   margin-left: 0 !important;
+  margin-top: 3.7vh;
 }
 
 .specific-article {
-  min-height: 28vh;
+  min-height: 40vh;
   background: no-repeat center center;
   background-size: cover;
 }
