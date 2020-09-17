@@ -15,7 +15,10 @@ module CategoriesHelper
 
   def create_article(article)
     content_tag :div, class: %w[col-md-6 d-flex img-height] do
-      featured_article(article).concat(specific_category_article(article))
+      featured_article(article)
+      .concat(specific_category_article(article))
+      #.concat(helper.link_to('Show', article_path))
+      #.truncate(article.content, :ommision => "... Read More", :length => 25)
     end
   end
 
@@ -35,6 +38,8 @@ module CategoriesHelper
     content_tag :div, class: 'col-md-6 category-link' do
       link_to(article.category.name, categories_path(id: article.category))
         .concat(content_tag(:p, article.title))
-    end
+        .concat(content_tag(:p, article.content))
+        .concat(link_to 'Show', article_path(article))
+    end  
   end
 end
