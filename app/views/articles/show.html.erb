@@ -1,32 +1,21 @@
-<div>
-  <p>
-    <strong>Category:</strong>
-    <%= @article.category.name %>
-  </p>
-
-  <p>
-    <%= @article.title %>
-  </p>
-
-  <p>
-    <%= @article.content %>
-  </p>
-
-  <p>
-    <strong>Photo:</strong>
-    <%= image_tag(@article.photo) if @article.photo.attached? %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= @article.author_id %>
-  </p>
-
-  <%= link_to article_votes_path(@article), method: :post do %>
-    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-  <% end %>
-  <%= @article.votes.count %>
-  <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'Back', articles_path %>
-</div>
+<article class= "article-show d-flex justify-content-center align-items-center">
+  <div class="card" style="width: 35rem">
+    <div class="card-img-top">
+      <%= image_tag("#{@article.image}") if @article.photo.attached? %>
+    </div>
+    <div class="card-body">
+      <p class="title is-4">Category: <%= @article.category.name %></p>
+      <h5 class="card-title"><%= @article.title %></h5>
+      <p class="card-text"><%= @article.content %></p>
+      <p>
+        <%= link_to article_votes_path(@article), method: :post do %>
+          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          <%= @article.votes.count %>
+        <% end %>
+      </p>
+      <%= link_to 'Edit', edit_article_path(@article) %>
+      <%= link_to 'Back', articles_path %>
+    </div>
+  </div>
+</article> 
 
