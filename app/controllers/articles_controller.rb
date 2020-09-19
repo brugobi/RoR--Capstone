@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     @feature_article = Article.first
     if params.key?(:category)
       @category = Category.find_by_name(params[:category])
-      @articles = Article.where(category: @category).includes(:category)
+      @articles = Article.where(category: @category)
     else
       @articles = Article.belong_to_category.includes(:category)
     end

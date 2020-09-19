@@ -4,14 +4,15 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categorized_articles = @category.articles
-    # @categories = Category.all
+    #@categorized_articles = @category.articles
+    @categories = Category.all
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @specific_categorized_articles = @category.articles
+    @category = Category.find(params[:id])
+    # @specific_categorized_articles = @category.articles
   end
 
   # GET /categories/new
