@@ -1,7 +1,15 @@
 .nav-color {
-  background-color: rgb(255, 255, 255);
-  border-bottom: solid 5px rgb(108, 102, 100);
-  font-size: large;
+  background: /* gradient can be an image */
+    linear-gradient(
+      to left, 
+      rgb(108, 103, 99) 80%,
+      rgb(232, 75, 42) 20%
+    )
+    left 
+    bottom
+    white    
+    no-repeat; 
+  background-size:100% 5px ;/* if linear-gradient, we need to resize it */
 }
 
 .nav-color a {
