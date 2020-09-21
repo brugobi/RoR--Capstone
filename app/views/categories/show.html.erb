@@ -1,5 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<div class='row cat-show'>
-  <%= full_article_container(@specific_categorized_articles)%>
+<div>
+  <% @specific_categorized_articles.each do |article| %>
+    <div>
+      <div>
+        <%= link_to article_path(article) do %>
+          <%= image_tag("#{article.image}", class: "category-grid-images")  %>
+        <% end %>
+      </div>
+      <div>
+        <p><%= @category.name %></p>
+        <p><%= article.title %></p>
+        <p><%= truncate article.content, length: 150 %></p>
+        <p><%= link_to 'Read More', article_path(article), class: "" %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
