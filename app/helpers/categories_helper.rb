@@ -15,25 +15,18 @@ module CategoriesHelper
 
   def create_article(article)
     content_tag :div, class: %w[col-md-6 d-flex img-height] do
-      featured_article(article)
-      .concat(specific_category_article(article))
+      specific_category_article(article)
     end
   end
 
   def create_reverse_article(article)
     content_tag :div, class: %w[col-md-6 d-flex img-height] do
-      specific_category_article(article).concat(feature_article(article))
-    end
-  end
-
-  def featured_article(article)
-    content_tag :div, class: %w[col-md-6 img-height] do
-      image_tag(article.image.to_s, class: 'full-width', alt: 'Continue')
+      specific_category_article(article)
     end
   end
 
   def specific_category_article(article)
-    content_tag :div, class: 'col-md-6 category-link' do
+    content_tag :div, class: '' do
       link_to(article.category.name)
         .concat(content_tag(:p, article.title))
         .concat(content_tag(:p, article.content))

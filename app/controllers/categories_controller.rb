@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
-    # @specific_categorized_articles = @category.articles
+    @specific_categorized_articles = @category.articles
   end
 
   # GET /categories/new
