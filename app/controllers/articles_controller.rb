@@ -19,8 +19,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    # @article = current_user.articles.build
-    @article = Article.new
+    @article = current_user.articles.build
+    #@article = Article.new
     @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
@@ -32,9 +32,10 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
-    # @article = current_user.articles.build(article_params)
+    #@article = Article.new(article_params)
+    
     @article.author_id = current_user
+    @article = current_user.articles.build(article_params)
     @article.category_id = params[:category_id]
     respond_to do |format|
       if @article.save

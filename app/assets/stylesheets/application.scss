@@ -10,7 +10,7 @@ html, body {
 
 header,
 footer {
-  height: 11vh;
+  
 }
 
 main {
@@ -24,9 +24,8 @@ main {
 }
 
 .wrapper {
-    height: 100vh;
-    display: flex;
+  display: flex;
 
-    /* Direction of the items, can be row or column */
-    flex-direction: column;
+  /* Direction of the items, can be row or column */
+  flex-direction: column;
 }
