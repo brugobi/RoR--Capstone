@@ -5,5 +5,8 @@ class Article < ApplicationRecord
   has_many :votes, dependent: :destroy
 
   scope :belong_to_category, -> {order(:title).limit(4)}
-  # scope :belong_to_category, -> {order(:title).group(:votes_count).limit(4)}
+  scope :with_votes, -> { select('articles.*, COUNT(votes.user_id) as votes_count').left_joins(:votes).group(:id) }
+  scope :most_voted, -> { with_votes.order(votes_count: :desc) }
+  
+  validates :title, :content, presence: true
 end

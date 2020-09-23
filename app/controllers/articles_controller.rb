@@ -4,10 +4,10 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @feature_article = Article.first
+    @feature_article = Article.most_voted.first
     if params.key?(:category)
       @category = Category.find_by_name(params[:category])
-      @articles = Article.where(category: @category)
+      @articles = Article.where(category: @category).belong_to_category.includes(:category)
     else
       @articles = Article.belong_to_category.includes(:category)
     end
@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
   def create
     #@article = Article.new(article_params)
     
-    @article.author_id = current_user
+    #@article.author_id = current_user
     @article = current_user.articles.build(article_params)
     @article.category_id = params[:category_id]
     respond_to do |format|
