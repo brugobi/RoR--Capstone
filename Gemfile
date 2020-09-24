@@ -68,6 +68,7 @@ group :development, :test do
   # Faker, a port of Data::Faker from Perl, is used to easily
   # generate fake data: names, addresses, phone numbers, etc.
   gem 'faker', '~> 1.6', '>= 1.6.6'
+  gem "rspec-rails"
 end
 
 group :development do
@@ -85,6 +86,7 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
