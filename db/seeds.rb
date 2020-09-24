@@ -18,6 +18,8 @@ Category.destroy_all
 
 my_category = Category.create([{name: 'Outside', priority: true}, {name: 'Food', priority: true}, {name: 'City', priority: true},{name: 'Sports', priority: true}, {name: 'Monument', priority: true}])
 
+bruna = User.create name: 'Bruna'
+
 p "Created #{Category.count} categories"
 
 # create the article using that category

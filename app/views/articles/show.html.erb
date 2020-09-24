@@ -1,10 +1,16 @@
 <article class= "article-show d-flex justify-content-center align-items-center">
-  <div class="card" style="width: 35rem">
-    <div class="card-img-top">
-      <%= image_tag("#{@article.image}") if @article.photo.attached? %>
+  <div class="card" style="width: 40rem">
+    <div class="card-img-top img-fluid">
+      <%# <%= image_tag("#{@article.image}") if @article.photo.attached? %>
+      
+        <%= image_tag("#{@article.image}", class: 'img-article-show') %>
+      
+        <%# <%= image_tag(@article.photo) if @article.photo.attached? %>
+      
     </div>
     <div class="card-body">
       <p class="title is-4">Category: <%= @article.category.name %></p>
+      <p class="">Author: <%= @article.author.name %></p>
       <h5 class="card-title"><%= @article.title %></h5>
       <p class="card-text"><%= @article.content %></p>
       <p>
@@ -13,8 +19,6 @@
           <%= @article.votes.count %>
         <% end %>
       </p>
-      <%= link_to 'Edit', edit_category_path(@article) %>
-      <%= link_to 'Back', articles_path %>
     </div>
   </div>
 </article> 

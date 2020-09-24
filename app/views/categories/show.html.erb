@@ -8,8 +8,8 @@
           <%= image_tag("#{article.image}", class: "category-article-image")  %>
         <% end %>
       </div>
-      <div class="col-md-6 category-article-content">
-        <p><%= @category.name %></p>
+      <div class="col-md-6 category-article-content main-index-article">
+        <p class="category-name"><%= @category.name %></p>
         <p><%= article.title %></p>
         <p><%= truncate article.content, length: 150 %></p>
         <p><%= link_to 'Read More', article_path(article), class: "" %></p>  
