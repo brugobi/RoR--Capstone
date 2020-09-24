@@ -8,4 +8,7 @@ class Article < ApplicationRecord
   scope :belong_to_category, -> {order(:title).limit(4)}
   scope :with_votes, -> { select('articles.*, COUNT(votes.user_id) as votes_count').left_joins(:votes).group(:id) }
   scope :most_voted, -> { with_votes.order(votes_count: :desc) }
+
+  validates :title, presence: true, length: { minimum: 1, maximum: 150 }
+  validates :title, :content, :photo, :category_id, presence: true
 end
