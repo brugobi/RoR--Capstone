@@ -1,8 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[show index]
-  # GET /articles
-  # GET /articles.json
+
   def index
     @feature_article = Article.most_voted.first
     if params.key?(:category)
@@ -13,14 +12,11 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # GET /articles/1
-  # GET /articles/1.json
   def show; end
 
   # GET /articles/new
   def new
     @article = current_user.articles.build
-    # @article = Article.new
     @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
@@ -30,7 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   # POST /articles
-  # POST /articles.json
+
   def create
     @article = current_user.articles.build(article_params)
     @article.category_id = params[:category_id]
