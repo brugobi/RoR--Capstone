@@ -13,7 +13,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 # Flexible authentication solution for Rails with Warden
@@ -62,13 +61,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'faker', '~> 1.6', '>= 1.6.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Faker, a port of Data::Faker from Perl, is used to easily
   # generate fake data: names, addresses, phone numbers, etc.
-  gem 'faker', '~> 1.6', '>= 1.6.6'
   gem 'rspec-rails'
 end
 
