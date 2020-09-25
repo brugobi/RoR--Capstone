@@ -1,15 +1,15 @@
 .nav-color {
-  background: /* gradient can be an image */
+  background:
     linear-gradient(
-      to left, 
+      to left,
       rgb(108, 103, 99) 80%,
       rgb(232, 75, 42) 20%
     )
-    left 
+    left
     bottom
-    white    
-    no-repeat; 
-  background-size:100% 5px ;/* if linear-gradient, we need to resize it */
+    white
+    no-repeat;
+  background-size: 100% 5px;/* if linear-gradient, we need to resize it */
 }
 
 .nav-color a {
@@ -17,5 +17,5 @@
 }
 
 .nav-color a:hover {
-  color:rgb(232, 75, 42) !important;
+  color: rgb(232, 75, 42) !important;
 }

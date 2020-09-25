@@ -26,11 +26,15 @@
   position: absolute;
 }
 
+.back-color a {
+  color: rgb(108, 103, 99);
+}
+
 .main-index-article a:link {
   color: rgb(232, 75, 42) !important;
 }
 
-.main-index-article  a:visited {
+.main-index-article a:visited {
   color: rgb(232, 75, 42) !important;
 }
 
@@ -57,18 +61,14 @@
   padding: 3px;
 }
 
-.back-color a {
-  color: rgb(108, 103, 99);
-}
-
-.btnSubmit2{
+.btnSubmit2 {
   font-weight: 600;
   width: 70%;
   color: #282726;
   background-color: #fff;
   border: none;
   border-radius: 1.5rem;
-  padding:2%;
+  padding: 2%;
 }
 
 .article-show {
@@ -82,7 +82,7 @@
 .grid-item {
   .category-article-show {
     padding: 0 !important;
-    
+
     .image-specific-category {
       padding: 0 !important;
     }
@@ -105,6 +105,7 @@
   .category-article-show:nth-child(4n+3) div:nth-child(1) {
     order: 1;
   }
+
   .category-article-show:nth-child(4n+4) div:nth-child(1) {
     order: 1;
   }
