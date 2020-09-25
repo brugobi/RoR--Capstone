@@ -33,7 +33,7 @@
 
 - Heroku App
 
-You can click on this [link]()
+You can click on this [link](https://trip-tips-canada.herokuapp.com)
 
 
 ## Getting Started
