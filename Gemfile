@@ -13,6 +13,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 # Flexible authentication solution for Rails with Warden
