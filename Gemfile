@@ -68,7 +68,7 @@ group :development, :test do
   # Faker, a port of Data::Faker from Perl, is used to easily
   # generate fake data: names, addresses, phone numbers, etc.
   gem 'faker', '~> 1.6', '>= 1.6.6'
-  gem "rspec-rails"
+  gem 'rspec-rails'
 end
 
 group :development do

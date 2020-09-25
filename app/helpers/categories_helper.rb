@@ -30,7 +30,7 @@ module CategoriesHelper
       link_to(article.category.name)
         .concat(content_tag(:p, article.title))
         .concat(content_tag(:p, article.content))
-        .concat(link_to 'Show', article_path(article))
-    end  
+        .concat(link_to('Show', article_path(article)))
+    end
   end
 end

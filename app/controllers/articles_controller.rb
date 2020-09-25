@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = current_user.articles.build
-    #@article = Article.new
+    # @article = Article.new
     @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
