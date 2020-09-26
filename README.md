@@ -1,6 +1,6 @@
 # TRIP TIPS
 
-> This is blog where the user can create articles to share informations about traveling in Canada.
+> This is a Desktop version of a blog where the user can create articles to share informations about traveling in Canada.
 
 ## Features
 - Registration & Login;
@@ -41,8 +41,9 @@ You can click on this [link](https://trip-tips-canada.herokuapp.com)
 
 ### Prerequisites
 
-Ruby: 2.6.5
-Rails: 5.2.4.3
+- Ruby: 2.6.5
+
+- Rails: 5.2.4.3
 
 To get started open the directory where you will save this repo by typing on your terminal:
 
@@ -50,25 +51,25 @@ To get started open the directory where you will save this repo by typing on you
 $ cd <directory>
 ```
 
-Clone the repo typing:
+- Clone the repo typing:
 
 ```
 $ git clone git@github.com:brugobi/RoR--Capstone.git
 ```
 
-Install the needed gems:
+- Install the needed gems:
 
 ```
 $ bundle install --without production
 ```
 
-Setup database:
+- Setup database:
 
 ```
-$ rails db:create' 
+$ rails db:create 
 ````
 ```
-$ rails db:migrate'
+$ rails db:migrate
 ```
 
 
