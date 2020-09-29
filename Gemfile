@@ -61,6 +61,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'faker', '~> 1.6', '>= 1.6.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -79,7 +80,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # help to kill N+1 queries and unused eager loading
   gem 'bullet', '~> 5.7', '>= 5.7.5'
-  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 group :test do
@@ -90,7 +90,6 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'capybara-screenshot', '~> 1.0', '>= 1.0.13'
   gem 'chromedriver-helper'
-  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
