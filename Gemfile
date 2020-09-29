@@ -84,10 +84,11 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '~> 3.33'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'capybara-screenshot', '~> 1.0', '>= 1.0.13'
   gem 'chromedriver-helper'
 end
 
