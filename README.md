@@ -88,8 +88,9 @@ Open `http://localhost:3000/` in your browser.
 ### Run tests
 
 ```
-$ rspec --format documentation
+$ bundle exec rspec --format documentation
 ```
+![test_result](./app/assets/images/test_result.png)
 
 ## Author
 
