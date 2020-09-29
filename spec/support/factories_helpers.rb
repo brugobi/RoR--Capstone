@@ -20,7 +20,6 @@ module FactoriesHelpers
   def category_data
     {
       name: Faker::Lorem.sentence,
-      image: Faker::LoremPixel.image,
       priority: true
     }
   end
