@@ -12,7 +12,9 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @voted_by_user = Vote.where(user_id: current_user.id, article_id: @article.id).first
+  end
 
   # GET /articles/new
   def new
