@@ -6,7 +6,7 @@ class VotesController < ApplicationController
       flash[:alert] = 'You have already voted for this article!'
     else
       article_voted = Article.find(params[:article_id])
-      current_user.voted_articles << article_voted
+      current_user.voted_articles << article_votedpush
       flash[:notice] = 'You upvoted this article.'
     end
     redirect_back(fallback_location: root_path)

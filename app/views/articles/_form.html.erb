@@ -25,10 +25,10 @@
             <%= form.text_area :content %>
           </div>
 
-          <div class="field">
-            <%= form.label :photo %>
-            <%= form.file_field :photo %>
-          </div>
+        <div class="field">
+          <%= form.label :image, 'Photo (URL)', :class => 'form-label' %>
+          <%= form.text_field :image, :class => 'form-text', placeholder: 'URL here...'  %>
+        <div class="field">
 
           <div class="dropdown-divider"></div>
             <span class="color" href="#">Select a category</span>
