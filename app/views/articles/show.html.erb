@@ -19,12 +19,11 @@
           <i class="fa fa-thumbs-up" aria-hidden="true"></i>
           <%= @article.votes.count %>   
         <% end %>
-      <% end %>
-        
         <% if current_user&.articles&.include?(@article) %>
           <%= link_to 'Edit',  edit_article_path(@article) %>
           <%= link_to 'Destroy',  @article, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
+        <% end %>  
+      <% end %>
       </p>
     </div>
   </div>
