@@ -4,7 +4,8 @@ module FactoriesHelpers
   def article_data
     {
       title: Faker::Lorem.sentence,
-      content: Faker::Lorem.paragraph
+      content: Faker::Lorem.paragraph,
+      image: 'https://cdn.pixabay.com/photo/2020/09/27/09/34/cats-5606202_960_720.jpg'
     }
   end
 

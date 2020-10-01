@@ -1,12 +1,7 @@
 <article class= "article-show d-flex justify-content-center align-items-center">
   <div class="card" style="width: 40rem">
     <div class="card-img-top img-fluid">
-      <%# <%= image_tag("#{@article.image}") if @article.photo.attached? %>
-      
-        <%= image_tag("#{@article.image}", class: 'img-article-show') %>
-      
-        <%# <%= image_tag(@article.photo) if @article.photo.attached? %>
-      
+      <%= image_tag("#{@article.image}", class: 'img-article-show') %>
     </div>
     <div class="card-body">
       <p class="title is-4">Category: <%= @article.category.name %></p>

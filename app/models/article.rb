@@ -5,8 +5,8 @@ class Article < ApplicationRecord
   belongs_to :category
   has_many :votes, dependent: :destroy
 
-  scope :belong_to_category_by_date, -> { order(created_at: :desc) } 
-  scope :belong_to_category, -> { belong_to_category_by_date.order(:title).limit(4) } 
+  scope :belong_to_category_by_date, -> { order(created_at: :desc) }
+  scope :belong_to_category, -> { belong_to_category_by_date.order(:title).limit(4) }
   scope :with_votes, -> { select('articles.*, COUNT(votes.user_id) as votes_count').left_joins(:votes).group(:id) }
   scope :most_voted, -> { with_votes.order(votes_count: :desc) }
 

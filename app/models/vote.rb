@@ -5,6 +5,7 @@ class Vote < ApplicationRecord
   belongs_to :article
 
   private
+
   # After creating a Vote row the vote cache will be update at Article table
   def increment_votes
     Article.increment_vote_cache(article_id)
