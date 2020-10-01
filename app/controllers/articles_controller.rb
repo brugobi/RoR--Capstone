@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @voted_by_user = Vote.where(user_id: current_user.id, article_id: @article.id).first
+    @voted_by_user = Vote.where(article_id: @article.id).first
   end
 
   # GET /articles/new
