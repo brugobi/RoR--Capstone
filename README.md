@@ -76,6 +76,9 @@ $ rails db:create
 $ rails db:migrate
 ```
 
+```
+$ rake db:seed
+```
 
 ### Usage
 

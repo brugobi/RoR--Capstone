@@ -16,18 +16,14 @@ class ArticlesController < ApplicationController
     @voted_by_user = Vote.where(article_id: @article.id).first
   end
 
-  # GET /articles/new
   def new
     @article = current_user.articles.build
     @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
-  # GET /articles/1/edit
   def edit
     @categories = Category.all.map { |c| [c.name, c.id] }
   end
-
-  # POST /articles
 
   def create
     @article = current_user.articles.build(article_params)
@@ -41,8 +37,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /articles/1
-  # PATCH/PUT /articles/1.json
   def update
     @article.category_id = params[:category_id]
     if @article.update(article_params)
@@ -54,8 +48,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # DELETE /articles/1
-  # DELETE /articles/1.json
   def destroy
     @article = current_user.articles.find(params[:id])
     @article.destroy
