@@ -6,7 +6,7 @@
 - Registration & Login;
 - Ability to create categories;
 - Ability to create articles that belong to multiple categories and contain images;
-- Ability to vote articles.
+- Ability to vote/downvote articles.
 
 ![home_page](./app/assets/images/home_page.png)
 
@@ -15,6 +15,10 @@
 ![category_page](./app/assets/images/category_page.png)
 
 ![article_page](./app/assets/images/article_page.png)
+
+## Live Demo
+
+video presentation [link](https://www.loom.com/share/5b7b0a847aa441549d1096e97d323387)
 
 ## Built With
 
