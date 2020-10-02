@@ -1,0 +1,20 @@
+<div class="main main-index-article">
+  <div class="row">
+    <div class="col-md-12 feature-article" style = "background: linear-gradient( rgba(77, 66, 60, .4), rgba(77, 66, 60, .4) ), url(<%= @feature_article.image %>) no-repeat center center; background-size: cover;">
+      <%= link_to article_path(@feature_article) do %>
+        <h2>
+          <%= @feature_article.title %>
+        </h2>
+      <% end %>
+    </div>
+    <div class="row category-article">
+      <% @articles.each do |article| %>
+        <div class="col-md-3" style = "background: linear-gradient( rgba(77, 66, 60, .4), rgba(77, 66, 60, .4) ), url(<%= article.image %>) no-repeat center center; background-size: cover;">
+          <p><%= link_to article.category.name, category_path(article.category.id) %></p>
+          <p><%= article.title %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

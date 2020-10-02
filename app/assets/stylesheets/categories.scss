@@ -1,0 +1,33 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.img-height {
+  height: 40vh;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.full-width {
+  width: 55vh;
+  height: 40vh;
+}
+
+.category-link {
+  background-color: rgb(244, 244, 244);
+}
+
+.category-link a:link {
+  color: rgb(232, 75, 42);
+  font-size: large;
+  text-decoration: none;
+  border-bottom: 3px solid rgb(232, 75, 42);
+}
+
+.category-link a:visited {
+  color: rgb(232, 75, 42);
+}
+
+.category-link p {
+  color: rgb(232, 75, 42);
+}

@@ -7,9 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <header>
+        <%= render 'layouts/navbar' %>
+      </header>
+      <div class="main">
+        <%= render 'layouts/alerts' %>
+        <%= yield %>
+      </div>
+    </div>
+    <footer class="footer">
+      <%= render 'layouts/footer' %> 
+    </footer>
   </body>
 </html>

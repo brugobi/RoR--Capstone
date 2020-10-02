@@ -1,0 +1,27 @@
+@import "/*";
+@import "bootstrap";
+@import "tether";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+html,
+body {
+  background-color: rgb(61, 52, 47);
+  font-family: 'Rubik', sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+.logo {
+  width: 80px;
+  height: 70px;
+  padding-right: 5px;
+}
+
+.wrapper {
+  display: flex;
+
+  /* Direction of the items, can be row or column */
+  flex-direction: column;
+}

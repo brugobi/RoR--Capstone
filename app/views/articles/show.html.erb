@@ -1,0 +1,30 @@
+<article class= "article-show d-flex justify-content-center align-items-center">
+  <div class="card" style="width: 40rem">
+    <div class="card-img-top img-fluid">
+      <%= image_tag("#{@article.image}", class: 'img-article-show') %>
+    </div>
+    <div class="card-body">
+      <p class="title is-4">Category: <%= @article.category.name %></p>
+      <p class="">Author: <%= @article.author.name %></p>
+      <h5 class="card-title"><%= @article.title %></h5>
+      <p class="card-text"><%= @article.content %></p>
+      <p>
+      <% if @voted_by_user %>
+        <%= link_to delete_article_vote_path(@article), method: :delete do %>
+          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          <%= @article.votes.count %>   
+        <% end %>
+      <% else %>
+        <%= link_to article_votes_path(@article), method: :post do %>
+          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          <%= @article.votes.count %>   
+        <% end %>
+        <% if current_user&.articles&.include?(@article) %>
+          <%= link_to 'Edit',  edit_article_path(@article) %>
+          <%= link_to 'Destroy',  @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>  
+      <% end %>
+      </p>
+    </div>
+  </div>
+</article> 

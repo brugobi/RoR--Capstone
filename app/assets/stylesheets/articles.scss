@@ -1,0 +1,112 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.feature-article {
+  width: 100%;
+  height: 49vh;
+}
+
+.category-article {
+  width: 100%;
+  height: 30vh;
+  margin-top: 0 !important;
+}
+
+.category-article p {
+  color: white;
+  font-size: 20px;
+}
+
+.category-name {
+  color: rgb(232, 75, 42) !important;
+  font-size: 20px;
+}
+
+.title-feature {
+  position: absolute;
+}
+
+.back-color a {
+  color: rgb(108, 103, 99);
+}
+
+.main-index-article a:link {
+  color: rgb(232, 75, 42) !important;
+}
+
+.main-index-article a:visited {
+  color: rgb(232, 75, 42) !important;
+}
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.specific-article {
+  min-height: 40vh;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.new-article {
+  padding-top: 10px;
+}
+
+.article-field {
+  padding: 20px 0 20px 0;
+}
+
+.field {
+  padding: 3px;
+}
+
+.btnSubmit2 {
+  font-weight: 600;
+  width: 70%;
+  color: #282726;
+  background-color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 2%;
+}
+
+.article-show {
+  margin-top: 15px;
+}
+
+.img-article-show {
+  width: 100%;
+}
+
+.grid-item {
+  .category-article-show {
+    padding: 0 !important;
+
+    .image-specific-category {
+      padding: 0 !important;
+    }
+
+    .category-article-image {
+      width: 100%;
+      height: 38vh;
+      padding: 0 !important;
+    }
+
+    .category-article-content {
+      width: 100%;
+      height: 38vh;
+      background-color: #fff;
+    }
+  }
+}
+
+@media (min-width: 80vh) {
+  .category-article-show:nth-child(4n+3) div:nth-child(1) {
+    order: 1;
+  }
+
+  .category-article-show:nth-child(4n+4) div:nth-child(1) {
+    order: 1;
+  }
+}

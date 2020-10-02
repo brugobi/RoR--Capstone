@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="d-flex flex-wrap grid-item">
+  <% @specific_categorized_articles.each do |article| %>
+    <article class="col-md-6 d-flex category-article-show">
+      <div class="col-md-6 category-article-image">
+        <%= link_to article_path(article) do %>
+          <%= image_tag("#{article.image}", class: "category-article-image")  %>
+        <% end %>
+      </div>
+      <div class="col-md-6 category-article-content main-index-article">
+        <p class="category-name"><%= @category.name %></p>
+        <p><%= article.title %></p>
+        <p><%= truncate article.content, length: 150 %></p>
+        <p><%= link_to 'Read More', article_path(article), class: "" %></p>  
+      </div>   
+    </article>
+  <% end %>
+</div>

@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg font-weight-bold nav-color">
+  <%= image_tag "logo.png", class: "logo"%>
+  <a class="navbar-brand" href="#">triPTiPs</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <div class="nav-link" href="#">
+          <%= link_to 'HOME', root_path%>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CATEGORY
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-item" href="#">
+            <% Category.where(priority: true).each do |cat| %>
+              <%= link_to cat.name, articles_path(category: cat.name) %><br>  
+            <% end %>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"></a>
+            <%= link_to 'All Categories', articles_path%>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <% if current_user %>
+          <li class="nav-item active">
+            <%= link_to 'New Article', new_article_path %> |
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete%> 
+          </li>
+        <% else %>
+          <li class="nav-item active">
+            <%= link_to 'Sign Up', new_user_registration_path%> |
+            <%= link_to 'Sign In', new_user_session_path%>
+          </li>  
+        <% end %>
+      </ul>
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+.nav-color {
+  background:
+    linear-gradient(
+      to left,
+      rgb(108, 103, 99) 80%,
+      rgb(232, 75, 42) 20%
+    )
+    left
+    bottom
+    white
+    no-repeat;
+  background-size: 100% 5px;/* if linear-gradient, we need to resize it */
+}
+
+.nav-color a {
+  color: rgb(108, 103, 99) !important;
+}
+
+.nav-color a:hover {
+  color: rgb(232, 75, 42) !important;
+}

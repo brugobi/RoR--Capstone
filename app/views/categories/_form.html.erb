@@ -1,0 +1,26 @@
+<div class="container login-container">
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-md-4 login-form-2">
+      <h3>New Category</h3>
+      <%= simple_form_for(@category) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <div class="form-group">
+          <%= f.input :name %>
+          <%= f.input :priority %>
+        </div>
+        <div class="d-flex flex-column justify-content-around">
+          <div class="form-group btnSubmit2  text-center">
+            <%= f.button :submit %>
+          </div>
+          <div class="form-group btnSubmit text-center">
+            <%= link_to 'Back', new_article_path %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+   
+

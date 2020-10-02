@@ -1,0 +1,60 @@
+<div class="container login-container">
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-4 text-center login-form-2">
+      <h2 class = "color">New Article</h2>
+      <%= form_with(model: article, local: true) do |form| %>
+        <% if article.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+            <ul>
+              <% article.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="form-group">
+          <div class="field">
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+          </div>
+
+          <div class="field">
+            <%= form.label :content %>
+            <%= form.text_area :content %>
+          </div>
+
+        <div class="field">
+          <%= form.label :image, 'Photo (URL)', :class => 'form-label' %>
+          <%= form.text_field :image, :class => 'form-text', placeholder: 'URL here...'  %>
+        <div class="field">
+
+          <div class="dropdown-divider"></div>
+            <span class="color" href="#">Select a category</span>
+            <span><%= select_tag(:category_id, options_for_select(@categories)) %></span>
+          </div>
+          <div>
+            <p>OR</p>
+          </div>
+          <div>
+            <div class="form-group btnSubmit2 text-center">
+              <%= link_to 'Create new Category', new_category_path %></h1> 
+            </div>
+          </div>  
+          <div class="d-flex justify-content-around">
+            <div class="form-group btnSubmit text-center">
+              <%= form.button :submit %>
+            </div>
+            <div class="form-group btnSubmit text-center">
+              <%= link_to 'Back', root_path %>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+    <% end %>
+      </div>  
+    </div> 
+  </div>   
+</div>  
