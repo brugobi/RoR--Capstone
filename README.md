@@ -16,7 +16,7 @@
 
 ![article_page](./app/assets/images/article_page.png)
 
-## Live Demo
+## Video Presentation
 
 video presentation [link](https://www.loom.com/share/5b7b0a847aa441549d1096e97d323387)
 
