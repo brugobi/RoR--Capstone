@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
+  # include URI
+  validate :image_valid?
+
   belongs_to :author, class_name: User.name
   belongs_to :user, optional: true # to fix a issue with: user must to exist
   has_one_attached :photo
@@ -19,4 +22,15 @@ class Article < ApplicationRecord
     article = find(article_id)
     article.update_attributes(votes_count: article.votes_count + 1)
   end
+
+  # private
+
+  # def image_exists?(url)
+  #   str = URL.open(url)
+  #   str.content_type.start_with?'image'
+  # end
+
+  # def image_valid?
+  #   errors.add(:image, 'The URL image is not valid') unless image_exists?(image)
+  # end
 end
