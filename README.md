@@ -1,6 +1,6 @@
 # TRIP TIPS
 
-> This is a Desktop version of a blog where the user can create articles to share informations about traveling in Canada.
+> This is a Desktop version of a blog where the user can create articles to share information about traveling in Canada.
 
 ## Features
 - Registration & Login;
